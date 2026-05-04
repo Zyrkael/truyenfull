@@ -47,7 +47,19 @@ export function HomePage() {
               <div key={update.id} className="update-item">
                 <div className="update-title">
                   <ChevronRight size={16} className="update-title-icon" />
-                  <a href="#">{update.title}</a>
+                  {update.slug ? (
+                    <Link
+                      to={
+                        update.readChapter != null
+                          ? `/${update.slug}/chuong/${update.readChapter}`
+                          : `/${update.slug}`
+                      }
+                    >
+                      {update.title}
+                    </Link>
+                  ) : (
+                    <a href="#">{update.title}</a>
+                  )}
                   {update.isNew && <span className="pill pill-new">NEW</span>}
                 </div>
                 <div className="update-category">{update.cat}</div>

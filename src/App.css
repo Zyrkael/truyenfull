@@ -632,3 +632,415 @@
     font-size: 0.85rem;
   }
 }
+
+/* --- Trang chi tiết truyện --- */
+.novel-detail-wrap {
+  max-width: 100%;
+}
+
+.novel-bc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+
+.novel-bc a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.novel-bc-current {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.novel-detail-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: 12px;
+  align-items: start;
+}
+
+@media (max-width: 992px) {
+  .novel-detail-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.novel-detail-main {
+  padding: 12px;
+}
+
+.novel-detail-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #154f6f;
+  margin-bottom: 12px;
+  line-height: 1.25;
+}
+
+.novel-info-heading {
+  font-size: 15px;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.novel-info-inner {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.novel-cover-wrap {
+  flex: 0 0 auto;
+}
+
+.novel-cover-large {
+  display: block;
+  width: 160px;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border: 1px solid #dcdcdc;
+}
+
+.novel-meta {
+  flex: 1;
+  min-width: 200px;
+}
+
+.novel-meta-title {
+  font-size: 15px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.novel-dl {
+  margin: 0 0 8px;
+}
+
+.novel-dl-row {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 8px;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.novel-dl-row dt {
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.novel-dl-row dd {
+  margin: 0;
+}
+
+.novel-dl-row dd a {
+  color: #154f6f;
+  font-weight: 700;
+}
+
+.novel-dl-row dd a:hover {
+  text-decoration: underline;
+}
+
+.novel-rating {
+  font-size: 13px;
+  margin: 6px 0;
+}
+
+.novel-alt {
+  font-size: 13px;
+  margin: 4px 0 10px;
+}
+
+.novel-alt span {
+  font-weight: 700;
+}
+
+.novel-synopsis-label {
+  font-weight: 800;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.novel-synopsis-body {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--text-primary);
+}
+
+.novel-synopsis-body p + p {
+  margin-top: 8px;
+}
+
+.novel-more {
+  margin-top: 8px;
+  color: #154f6f;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 0;
+}
+
+.novel-more:hover {
+  text-decoration: underline;
+}
+
+.novel-chapters {
+  margin-top: 18px;
+}
+
+.novel-chapter-cols {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  columns: 3;
+  column-gap: 18px;
+}
+
+@media (max-width: 720px) {
+  .novel-chapter-cols {
+    columns: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .novel-chapter-cols {
+    columns: 1;
+  }
+}
+
+.novel-chapter-cols li {
+  break-inside: avoid;
+  margin-bottom: 6px;
+}
+
+.novel-chapter-link {
+  font-size: 13px;
+  color: #154f6f;
+  font-weight: 700;
+}
+
+.novel-chapter-link:hover {
+  text-decoration: underline;
+}
+
+.novel-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px dashed #dcdcdc;
+}
+
+.novel-page-btn {
+  padding: 6px 12px;
+  border: 1px solid #dcdcdc;
+  background: #f7f7f7;
+  font-weight: 700;
+  font-size: 12px;
+  border-radius: 2px;
+}
+
+.novel-page-btn:hover:not(:disabled) {
+  background: #eee;
+}
+
+.novel-page-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.novel-page-num {
+  font-size: 13px;
+}
+
+.novel-comments-placeholder {
+  margin-top: 18px;
+}
+
+.novel-muted {
+  font-size: 13px;
+  color: var(--text-tertiary);
+}
+
+.novel-aside-block {
+  padding: 10px;
+}
+
+.novel-aside-title {
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.novel-aside-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.novel-aside-list li {
+  margin-bottom: 8px;
+}
+
+.novel-aside-link {
+  font-size: 13px;
+  font-weight: 700;
+  color: #154f6f;
+}
+
+.novel-aside-link:hover:not(.muted) {
+  text-decoration: underline;
+}
+
+.novel-aside-link.muted {
+  color: var(--text-secondary);
+  cursor: default;
+}
+
+/* --- Trang đọc chương --- */
+.chapter-read-wrap {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.chapter-bc a {
+  color: #154f6f;
+  font-weight: 700;
+}
+
+.chapter-bc a:hover {
+  text-decoration: underline;
+}
+
+.chapter-read-panel {
+  padding: 16px 18px 24px;
+}
+
+.chapter-read-head {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.chapter-read-series {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.chapter-read-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #154f6f;
+  line-height: 1.25;
+}
+
+.chapter-read-rule {
+  border: none;
+  border-top: 1px solid #dcdcdc;
+  margin: 12px 0;
+}
+
+.chapter-read-rule.thin {
+  margin: 8px 0;
+  opacity: 0.85;
+}
+
+.chapter-read-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.chapter-read-btn {
+  font-size: 13px;
+  font-weight: 700;
+  color: #154f6f;
+  padding: 6px 10px;
+  border: 1px solid #dcdcdc;
+  background: #f7f7f7;
+  border-radius: 2px;
+}
+
+.chapter-read-btn:hover:not(.disabled) {
+  background: #eee;
+}
+
+.chapter-read-btn.disabled {
+  color: var(--text-tertiary);
+  cursor: not-allowed;
+  background: #fafafa;
+}
+
+.chapter-read-body {
+  font-size: 22px;
+  line-height: 1.75;
+  color: var(--text-primary);
+  text-align: justify;
+  max-width: 100%;
+}
+
+.chapter-read-body p {
+  margin: 0 0 1em;
+  text-indent: 1.25em;
+}
+
+.chapter-read-body p:first-of-type {
+  text-indent: 0;
+}
+
+.chapter-read-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px dashed #dcdcdc;
+}
+
+.chapter-read-linkish {
+  font-size: 13px;
+  font-weight: 700;
+  color: #154f6f;
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+.chapter-read-linkish:hover {
+  text-decoration: underline;
+}
+
+.chapter-read-dot {
+  color: var(--text-tertiary);
+}
+
+.chapter-read-hint {
+  margin-top: 12px;
+  font-size: 12px;
+  color: var(--text-tertiary);
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .chapter-read-body {
+    font-size: 18px;
+  }
+  .chapter-read-title {
+    font-size: 20px;
+  }
+}

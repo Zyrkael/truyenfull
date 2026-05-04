@@ -1,7 +1,18 @@
 import { slugify } from '../lib/slug'
 
 export type HotNovel = { id: number; title: string; img: string; isFull: boolean }
-export type UpdateNovel = { id: number; title: string; cat: string; chap: string; time: string; isNew: boolean }
+export type UpdateNovel = {
+  id: number
+  title: string
+  cat: string
+  chap: string
+  time: string
+  isNew: boolean
+  /** slug URL chi tiết truyện, ví dụ cam-y-vi-phu-son-huu-thanh-moc */
+  slug?: string
+  /** Nếu có, link trực tiếp tới chương đọc (ví dụ 1 = /slug/chuong/1) */
+  readChapter?: number
+}
 export type CompletedNovel = { id: number; title: string; img: string; chap: string }
 
 export const CATEGORIES = [
@@ -94,11 +105,28 @@ export const HOT_NOVELS: HotNovel[] = [
 ]
 
 export const NEW_UPDATES: UpdateNovel[] = [
-  { id: 1, title: 'Bị Ép Làm Thông Phòng? Ta Quay Người Gả Cho Cha Của Tra Nam', cat: 'Cổ Đại', chap: 'Chương 374', time: '4 giờ trước', isNew: true },
+  {
+    id: 1,
+    title: 'Bị Ép Làm Thông Phòng? Ta Quay Người Gả Cho Cha Của Tra Nam',
+    cat: 'Cổ Đại',
+    chap: 'Chương 374',
+    time: '4 giờ trước',
+    isNew: true,
+    slug: 'bi-ep-lam-thong-phong-ta-quay-nguoi-ga-cho-cha-cua-tra-nam',
+    readChapter: 1,
+  },
   { id: 2, title: 'Uống Băng - Đào Tử Nhi', cat: 'Sủng', chap: 'Chương 183', time: '5 giờ trước', isNew: true },
   { id: 3, title: 'Ngày Đại Hôn, Ta Tự Tay Hủy Hôn', cat: 'Cổ Đại', chap: 'Chương 12', time: '9 giờ trước', isNew: false },
   { id: 4, title: 'Yêu Nữ', cat: 'Cổ Đại', chap: 'Chương 12', time: '10 giờ trước', isNew: false },
-  { id: 5, title: 'Cẩm Y Vi Phu - Sơn Hữu Thanh Mộc', cat: 'Cổ Đại', chap: 'Chương 94', time: '10 giờ trước', isNew: false },
+  {
+    id: 5,
+    title: 'Cẩm Y Vi Phu - Sơn Hữu Thanh Mộc',
+    cat: 'Cổ Đại',
+    chap: 'Chương 94',
+    time: '10 giờ trước',
+    isNew: false,
+    slug: 'cam-y-vi-phu-son-huu-thanh-moc',
+  },
   { id: 6, title: 'Nghe Nói Tôi Là Tra A - Qua Vân Tê', cat: 'Khác', chap: 'Chương 118', time: '5 ngày trước', isNew: false },
 ]
 
