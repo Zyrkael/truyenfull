@@ -1,94 +1,81 @@
-# React + TypeScript + Vite
+# 📚 TruyenFull Frontend
 
-This project uses **Bun** as the package manager and runtime.
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Bun](https://img.shields.io/badge/Bun-000000?style=for-the-badge&logo=bun&logoColor=white)](https://bun.sh/)
 
-## Getting Started
+TruyenFull is a modern, high-performance web application for reading novels and stories, built with cutting-edge frontend technologies.
 
-### Installation
+---
+
+## ✨ Features
+
+- **⚡ Blazing Fast**: Optimized with Vite and Bun for a near-instant development experience.
+- **🛡️ Type Safe**: Built entirely with TypeScript for robust and maintainable code.
+- **🎨 Modern UI**: Clean and responsive design tailored for a great reading experience.
+- **🚀 Hot Module Replacement**: Instant updates during development.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework**: [React 18+](https://react.dev/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Runtime & Package Manager**: [Bun](https://bun.sh/)
+- **Styling**: Vanilla CSS with modern practices.
+
+---
+
+## 🚀 Getting Started
+
+### 1. Prerequisites
+
+Ensure you have [Bun](https://bun.sh/) installed on your machine.
+
 ```bash
+# Check if bun is installed
+bun --version
+```
+
+### 2. Installation
+
+Clone the repository and install dependencies:
+
+```bash
+git clone git@github.com:Zyrkael/truyenfull.git
+cd truyenfull
 bun install
 ```
 
-### Development
+### 3. Development
+
+Start the development server:
+
 ```bash
 bun run dev
 ```
 
-### Build
+### 4. Build
+
+Build for production:
+
 ```bash
 bun run build
 ```
 
 ---
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🤖 AI Guidelines (Antigravity)
 
-Currently, two official plugins are available:
+This project is optimized for AI assistance. When working with **Antigravity**:
+- Always use `bun` for package management.
+- Follow the design patterns established in `src/App.css` and `src/index.css`.
+- Maintain TypeScript strictness.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 📄 License
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
