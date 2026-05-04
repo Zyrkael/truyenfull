@@ -6,11 +6,12 @@ export function SiteLayout() {
   return (
     <div className="app-container">
       <SiteHeader />
-      <main className="main-content container animate-fade-in">
+      <main className="main-content animate-fade-in">
         <Outlet />
       </main>
       <SiteFooter />
     </div>
   )
 }
+
 

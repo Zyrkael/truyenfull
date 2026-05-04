@@ -12,6 +12,7 @@ export function CategoryPage() {
   }, [cat])
 
   return (
+    <div className="container">
     <section className="updates-list">
       <div className="page-head">
         <h2 className="section-title" style={{ marginBottom: 0 }}>
@@ -22,11 +23,23 @@ export function CategoryPage() {
         </Link>
       </div>
 
-      <div className="updates-container" style={{ marginTop: '1rem' }}>
+      <div className="updates-container">
         {(items.length ? items : NEW_UPDATES.slice(0, 10)).map((update) => (
           <div key={update.id} className="update-item">
             <div className="update-title">
-              <a href="#">{update.title}</a>
+              {update.slug ? (
+                <Link
+                  to={
+                    update.readChapter != null
+                      ? `/${update.slug}/chuong/${update.readChapter}`
+                      : `/${update.slug}`
+                  }
+                >
+                  {update.title}
+                </Link>
+              ) : (
+                <a href="#">{update.title}</a>
+              )}
               {update.isNew && <span className="pill pill-new">NEW</span>}
             </div>
             <div className="update-category">{update.cat}</div>
@@ -36,6 +49,7 @@ export function CategoryPage() {
         ))}
       </div>
     </section>
+    </div>
   )
 }
 

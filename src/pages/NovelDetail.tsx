@@ -35,7 +35,7 @@ export function NovelDetailPage() {
   const coverSrc = novelCoverUrl(novel.coverSeed)
 
   return (
-    <div className="novel-detail-wrap">
+    <div className="container novel-detail-wrap">
       <nav className="novel-bc" aria-label="Breadcrumb">
         <Link to="/">Truyện</Link>
         <span className="novel-bc-sep"> › </span>

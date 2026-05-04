@@ -48,16 +48,17 @@ export function ChapterReadPage() {
   const next = chapter < novel.totalChapters ? `/${novel.slug}/chuong/${chapter + 1}` : null
 
   return (
-    <div className="chapter-read-wrap">
-      <nav className="novel-bc chapter-bc" aria-label="Breadcrumb">
+    <div className="container chapter-read-page">
+      <div className="chapter-read-wrap">
+        <nav className="novel-bc chapter-bc" aria-label="Breadcrumb">
         <Link to="/">Truyện</Link>
         <span className="novel-bc-sep"> › </span>
         <Link to={`/${novel.slug}`}>{novel.title}</Link>
         <span className="novel-bc-sep"> › </span>
         <span className="novel-bc-current">Chương {chapter}</span>
-      </nav>
+        </nav>
 
-      <article className="chapter-read-panel tf-panel">
+        <article className="chapter-read-panel tf-panel">
         <header className="chapter-read-head">
           <p className="chapter-read-series">{novel.title}</p>
           <h1 className="chapter-read-title">Chương {chapter}</h1>
@@ -120,7 +121,33 @@ export function ChapterReadPage() {
         </footer>
 
         <p className="chapter-read-hint">Dùng phím mũi tên trái/phải hoặc A/D để chuyển chương.</p>
-      </article>
+        </article>
+
+        <nav className="chapter-read-toolbar" aria-label="Điều hướng nhanh">
+        {prev ? (
+          <Link to={prev} className="chapter-read-toolbar-btn">
+            ‹ Trước
+          </Link>
+        ) : (
+          <span className="chapter-read-toolbar-btn ghost">‹ Trước</span>
+        )}
+        <span className="chapter-read-toolbar-mid">
+          <span className="chapter-read-toolbar-num">{chapter}</span>
+          <span className="chapter-read-toolbar-sep">/</span>
+          <span>{novel.totalChapters}</span>
+        </span>
+        {next ? (
+          <Link to={next} className="chapter-read-toolbar-btn">
+            Sau ›
+          </Link>
+        ) : (
+          <span className="chapter-read-toolbar-btn ghost">Sau ›</span>
+        )}
+        <Link to={`/${novel.slug}`} className="chapter-read-toolbar-toc">
+          Mục lục
+        </Link>
+        </nav>
+      </div>
     </div>
   )
 }
