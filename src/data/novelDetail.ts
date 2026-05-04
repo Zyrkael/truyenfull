@@ -23,14 +23,16 @@ export const NOVEL_DETAILS: Record<string, NovelDetail> = {
   [BI_EP_SLUG]: {
     slug: BI_EP_SLUG,
     title: 'Bị Ép Làm Thông Phòng? Ta Quay Người Gả Cho Cha Của Tra Nam',
-    author: 'Demo',
-    genres: ['Cổ Đại', 'Khác'],
+    author: 'Đang cập nhật',
+    genres: ['Cổ Đại', 'Ngôn Tình', 'Xuyên Sách'],
     statusLabel: 'Đang ra',
     rating: { score: 8.5, votes: 120 },
     coverSeed: 'bi-ep-cover',
     totalChapters: 374,
     synopsis:
-      'Demo UI — đây là phần giới thiệu placeholder cho truyện mẫu. Khi kết nối backend, nội dung thật sẽ được đổ vào đây.',
+      'Nàng bị ép vào thế khó trong hậu viện, nhưng lần này không còn chọn cách nhún nhường. Một đêm, một quyết định táo bạo thay đổi cục diện — và đưa nàng đến vị trí không ai ngờ tới.\n\n' +
+      'Cha chồng của kẻ đã hành hạ nàng… lại là mảnh ghép có thể giữ lại mạng sống nàng giữa vòng tranh đấu trong phủ. Nàng không còn đường lui, chỉ còn cách diễn cho tròn vai, rồi từng bước lật ngược cục diện.\n\n' +
+      'Đây là bản demo UI; nối API sau để hiển thị giới thiệu đầy đủ từ nguồn dữ liệu.',
     sameAuthor: [],
   },
   [CAM_Y_SLUG]: {
