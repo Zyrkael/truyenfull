@@ -1,0 +1,24 @@
+# Antigravity Project Rules
+
+You are working on the **truyenfull** project. This project uses **Bun** as the primary package manager and runtime.
+
+## Core Instructions
+- **Package Manager**: ALWAYS use `bun` instead of `npm` or `yarn`.
+  - Install dependencies: `bun install`
+  - Add packages: `bun add <package>`
+  - Run scripts: `bun run <script>`
+- **Runtime**: Use `bun` to run scripts and the development server.
+- **Commands**:
+  - Dev server: `bun run dev`
+  - Build: `bun run build`
+  - Lint: `bun run lint`
+
+## Tech Stack
+- **Frontend**: Vite + React + TypeScript
+- **Styling**: Vanilla CSS (unless specified otherwise)
+- **Package Manager**: Bun
+
+## Workflow
+1. Before installing anything, check `package.json`.
+2. Use `bun` for all terminal commands related to dependencies.
+3. Maintain the `bun.lock` file.

@@ -1,5 +1,26 @@
 # React + TypeScript + Vite
 
+This project uses **Bun** as the package manager and runtime.
+
+## Getting Started
+
+### Installation
+```bash
+bun install
+```
+
+### Development
+```bash
+bun run dev
+```
+
+### Build
+```bash
+bun run build
+```
+
+---
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
